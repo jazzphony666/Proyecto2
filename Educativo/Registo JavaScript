@@ -1,0 +1,24 @@
+const express = require('express');
+const bodyParser = require('body-parser');
+const app = express();
+const port = 3000;
+
+app.use(bodyParser.json());
+
+app.post('/procesar_registro', (req, res) => {
+  
+    const datosRegistro = req.body;
+
+    
+    if (datosRegistro) {
+       
+
+        res.json({ success: true, message: 'Registro exitoso' });
+    } else {
+        res.json({ success: false, message: 'Error en los datos del formulario' });
+    }
+});
+
+app.listen(port, () => {
+    console.log(`Servidor escuchando en http://localhost:${port}`);
+});

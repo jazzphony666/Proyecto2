@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Usuario</title>
+    <link rel="stylesheet" type="text/css" href="Registro Usuario CSS">
+</head>
+<body>
+
+    <form id="registroForm">
+        <!-- ... (tu formulario sigue aquí) -->
+    </form>
+
+    <script>
+        document.getElementById('registroForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            // Obtener los valores del formulario
+            var email = document.getElementById('email').value;
+            var nombre = document.getElementById('nombre').value;
+            var institucion = document.getElementById('institucion').value;
+            var grado = document.getElementById('grado').value;
+            var password = document.getElementById('password').value;
+
+            // Crear un objeto con los datos del formulario
+            var datosRegistro = {
+                email: email,
+                nombre: nombre,
+                institucion: institucion,
+                grado: grado,
+                password: password
+            };
+
+            // Enviar los datos al servidor
+            fetch('/procesar_registro', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(datosRegistro)
+            })
+            .then(response => response.json())
+            .then(data => {
+                // Manejar la respuesta del servidor
+                if (data.success) {
+                    alert('Registro exitoso');
+                    // Puedes redirigir al usuario o realizar otras acciones aquí
+                } else {
+                    alert('Error en el registro: ' + data.message);
+                }
+            })
+            .catch(error => {
+                console.error('Error en la solicitud:', error);
+                alert('Error en la solicitud al servidor');
+            });
+        });
+    </script>
+
+</body>
+</html>
