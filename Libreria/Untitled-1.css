@@ -1,0 +1,23 @@
+/* App.css */
+.App {
+    text-align: center;
+  }
+  
+  .logo-container {
+    margin-top: 50px;
+  }
+  
+  .menu-container {
+    margin-top: 20px;
+  }
+  
+  .menu-container ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .menu-container ul li {
+    padding: 10px 0;
+  }
+  
+  
