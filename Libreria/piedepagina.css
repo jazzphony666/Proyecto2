@@ -1,0 +1,29 @@
+.App-footer {
+    background-color: #282c34;
+    padding: 20px;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .App-footer nav ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .App-footer nav ul li {
+    display: inline;
+    margin: 0 15px;
+  }
+  
+  .App-footer nav ul li a {
+    color: #61dafb;
+    text-decoration: none;
+  }
+  
+  .App-footer nav ul li a:hover {
+    text-decoration: underline;
+  }
+  
