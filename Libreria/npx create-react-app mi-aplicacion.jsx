@@ -52,6 +52,7 @@ function Menu() {
           <li>Categorías</li>
           <li>Mi Biblioteca</li>
           <li>Configuración</li>
+          <li>Mi Perfil</li>
         </ul>
       )}
     </div>
