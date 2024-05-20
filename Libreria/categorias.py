@@ -7,6 +7,7 @@ gutenberg = pd.read_csv('gutenberg_books/books.csv')
 
 # Filtro por categorias
 fiction_books = goodreads[goodreads['genre'] == 'Fiction']
+drama_books = goodreads[goodreads['genre'] == 'Fiction']
 
 # seleccion de columnas
 selected_columns = fiction_books[['title', 'author', 'genre', 'year', 'publisher']]
